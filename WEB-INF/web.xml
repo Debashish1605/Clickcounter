@@ -1,0 +1,10 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <servlet>
+        <servlet-name>ClickServlet</servlet-name>
+        <servlet-class>ClickServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClickServlet</servlet-name>
+        <url-pattern>/click</url-pattern>
+    </servlet-mapping>
+</web-app>
