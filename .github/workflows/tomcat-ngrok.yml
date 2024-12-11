@@ -1,0 +1,24 @@
+name: Test Local Tomcat Server with ngrok
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on push to the main branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Install curl to test API calls
+      - name: Install curl
+        run: sudo apt-get install curl
+
+      # Test the Tomcat Manager API via the ngrok public URL
+      - name: Test Tomcat Manager API via ngrok
+        run: |
+          curl -X GET https://8572-103-211-52-171.ngrok-free.app/manager/html
