@@ -3,7 +3,7 @@ name: Test Local Tomcat Server with ngrok
 on:
   push:
     branches:
-      - main  # Trigger workflow on push to the main branch
+      - master  # Trigger workflow on push to the main branch
 
 jobs:
   test:
